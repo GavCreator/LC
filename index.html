@@ -8,6 +8,29 @@
         
         <iframe src="https://livecounts.io/tiktok-live-follower-counter/.simplygav" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
 
+                  <div id="countik-widget"></div>
+          <script>
+            (function() {
+              var countikWidget = document.createElement('script');
+              countikWidget.src = 'https://countik.com/widget.js';
+              countikWidget.async = true;
+              countikWidget.onload = function() {
+                if (typeof window.initializeCountikWidget === 'function') {
+                  window.initializeCountikWidget({
+                    container: '#countik-widget',
+                    themeColor: '#444444',
+                    uniqueId: '.simplygav',
+                    language: 'en'
+                  });
+                }
+              };
+              var firstScript = document.getElementsByTagName('script')[0];
+              firstScript.parentNode.insertBefore(countikWidget, firstScript);
+            })();
+          </script>
+          <a href="https://countik.com/user/.simplygav" target="_blank" class="pow-countik" style="font-size:11px;color:#333;display:block;padding:4px 3px;text-decoration:none;">Powered by Countik™</a>
+        
+
         <iframe src="https://socialblade.com/youtube/handle/gvnx/realtime" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
 
         <iframe src="https://socialblade.com/twitch/user/simplygav/realtime" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
