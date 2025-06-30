@@ -1,27 +1,43 @@
 <html>
     <head>
         <title>SimplyGav/GvNx Live Counters</title>
+        <style>
+            h1 { 
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+                margin: 0 10px 0 0;
+            }
+            .counter {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            .counter iframe {
+                border: 0;
+                width: 300px;
+                height: 80px;
+            }
+        </style>
     </head>
     <body>
-        <style>
-            h1 {font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;}
-        </style>
 
-        <!-- Live TikTok Follow Counter -->
-        <h1>Live TikTok Follow Counter</h1>
-        <iframe height="80px" width="300px" frameborder="0" src=https://livecounts.io/embed/tiktok-live-follower-counter/.simplygav style="border: 0; width:300px; height:80px;"></iframe>
-                
-        <!-- Live YouTube Subscriber Counter -->
-        <h1>Live YouTube Subscriber Counter</h1>
-        <iframe height="80px" width="300px" frameborder="0" src=https://livecounts.io/embed/youtube-live-subscriber-counter/UCw_RBgYNuXcQMZgJ9LRL2Lw style="border: 0; width:300px; height:80px;"></iframe>
+        <div class="counter">
+            <!-- Live TikTok Follow Counter -->
+            <h1>Live TikTok Follow Counter</h1>
+            <iframe src="https://livecounts.io/embed/tiktok-live-follower-counter/.simplygav"></iframe>
+        </div>
 
-        <!-- Live Twitch Follow Counter -->
-        <h1>Live Twitch Follow Counter</h1>
-        <iframe height="80px" width="300px" frameborder="0" src=https://livecounts.io/embed/twitch-live-follower-counter/simplygav style="border: 0; width:300px; height:80px;"></iframe>
+        <div class="counter">
+            <!-- Live YouTube Subscriber Counter -->
+            <h1>Live YouTube Subscriber Counter</h1>
+            <iframe src="https://livecounts.io/embed/youtube-live-subscriber-counter/UCw_RBgYNuXcQMZgJ9LRL2Lw"></iframe>
+        </div>
 
-        <!--
-            <iframe src="" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
-        -->
+        <div class="counter">
+            <!-- Live Twitch Follow Counter -->
+            <h1>Live Twitch Follow Counter</h1>
+            <iframe src="https://livecounts.io/embed/twitch-live-follower-counter/simplygav"></iframe>
+        </div>
 
     </body>
 </html>
