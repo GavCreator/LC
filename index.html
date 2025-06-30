@@ -3,7 +3,7 @@
         <title>SimplyGav/GvNx Live Counters</title>
         <style>
             body {
-                background-color: #121212;
+                background-color: #121212   ;
             }
             h1 { 
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -43,5 +43,12 @@
             <iframe src="https://livecounts.io/embed/twitch-live-follower-counter/simplygav"></iframe>
         </div>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                setInterval(function(){
+                    window.location.reload();
+                },360000)
+            })
+        </script>
     </body>
 </html>
