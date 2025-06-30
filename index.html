@@ -1,39 +1,27 @@
 <html>
-    <head>
+  <head>
+    <title>Social Stats Dashboard</title>
+  </head>
+  <body>
 
-    </head>
-    <body>
+    <!-- Remove TikTok iframe (due to CSP) -->
+    <!-- <iframe src="https://tiktok.com/@.simplygav" style="border:0 none;" scrolling="yes" frameborder="1" height="400" width="600" allowfullscreen></iframe> -->
 
-        <iframe src="https://tiktok.com/@.SimplyGav" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
-        
-        <iframe src="https://livecounts.io/tiktok-live-follower-counter/.simplygav" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
+    <!-- Use alternative live follower count for TikTok -->
+    <iframe src="https://livecounts.io/tiktok-live-follower-counter/.simplygav" style="border:0 none;" scrolling="yes" frameborder="1" height="400" width="600" allowfullscreen></iframe>
 
-                  <div id="countik-widget"></div>
-          <script>
-            (function() {
-              var countikWidget = document.createElement('script');
-              countikWidget.src = 'https://countik.com/widget.js';
-              countikWidget.async = true;
-              countikWidget.onload = function() {
-                if (typeof window.initializeCountikWidget === 'function') {
-                  window.initializeCountikWidget({
-                    container: '#countik-widget',
-                    themeColor: '#444444',
-                    uniqueId: '.simplygav',
-                    language: 'en'
-                  });
-                }
-              };
-              var firstScript = document.getElementsByTagName('script')[0];
-              firstScript.parentNode.insertBefore(countikWidget, firstScript);
-            })();
-          </script>
-          <a href="https://countik.com/user/.simplygav" target="_blank" class="pow-countik" style="font-size:11px;color:#333;display:block;padding:4px 3px;text-decoration:none;">Powered by Countik™</a>
-        
+    <!-- Countik widget container -->
+    <div id="countik-widget"></div>
+    <a href="https://countik.com/user/.simplygav" target="_blank" style="font-size:11px;color:#333;display:block;padding:4px 3px;text-decoration:none;">Powered by Countik™</a>
 
-        <iframe src="https://socialblade.com/youtube/handle/gvnx/realtime" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
+    <!-- Socialblade YouTube -->
+    <iframe src="https://socialblade.com/youtube/handle/gvnx/realtime" style="border:0 none;" scrolling="yes" frameborder="1" height="400" width="600" allowfullscreen></iframe>
 
-        <iframe src="https://socialblade.com/twitch/user/simplygav/realtime" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px" allowfullscreen></iframe>
+    <!-- Socialblade Twitch -->
+    <iframe src="https://socialblade.com/twitch/user/.simplygav/realtime" style="border:0 none;" scrolling="yes" frameborder="1" height="400" width="600" allowfullscreen></iframe>
 
-    </body>
+    <!-- External JS for Countik widget -->
+    <script src="countik-widget-loader.js" defer></script>
+
+  </body>
 </html>
