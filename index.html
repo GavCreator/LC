@@ -51,9 +51,8 @@
                 },360000)
 
                 setInterval(function(){
-                    countdown = countdown - 1000;
-                    converted = countdown/1000
-                    console.log(`${converted} seconds until the page refreshes`)
+                    countdown -= 1000;
+                    console.log(`${countdown/1000} seconds until the page refreshes`);
                 }, 1000)
             })
         </script>
